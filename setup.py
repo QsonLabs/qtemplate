@@ -14,7 +14,7 @@ def get_version():
 
 
 setup(
-    name="restd",
+    name="qtemplate",
     version=get_version(),
     tests_require=[
         'pytest',
