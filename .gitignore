@@ -1,0 +1,16 @@
+# Testing
+*.pyc
+*__pycache__
+*.pytest_cache
+.pytest_cache
+.pytest_cache/v/cache/lastfailed
+*_trial_temp*
+.tox
+.vscode
+
+# Packaging
+*.egg
+*.egg-info
+dist
+build
+
