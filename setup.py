@@ -18,7 +18,7 @@ setup(
     version=get_version(),
     tests_require=[
         'pytest',
-	'flake8'
+        'flake8'
     ],
     install_requires=[
         'pyyaml',
