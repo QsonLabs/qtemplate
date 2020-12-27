@@ -22,11 +22,15 @@ setup(
     ],
     install_requires=[
         'pyyaml',
-        'jinja2'
+        'jinja2',
+        'invoke'
     ],
     packages=[
         'qtemplate',
     ],
+    entry_points={
+        'console_scripts': ['qtemplate = qtemplate.main:program.run']
+    },
     author="Chris O'Connor",
     long_description=get_readme_md_contents(),
     long_description_content_type='text/markdown',
