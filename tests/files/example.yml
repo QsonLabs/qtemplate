@@ -1,0 +1,6 @@
+template_stores:
+  - item1
+  - item2
+prompt:
+  enabled: false
+key: value
