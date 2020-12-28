@@ -7,6 +7,11 @@ from urllib.parse import urlparse
 import yaml
 
 SELF = sys.modules[__name__]
+SCHEMES = [
+    'file',
+    'http',
+    'https'
+]
 
 
 def default_config():
@@ -42,9 +47,14 @@ def resolve_loader(uri):
     pass
 
 
-def resolve_scheme(scheme):
+def resolve_scheme(uri):
     """Ensures valid scheme and required URI fields per scheme"""
-    pass
+    parsed = urlparse(uri)
+    if parsed.scheme is None:
+        raise ValueError("URI {0} is missing scheme".format(uri))
+    elif parsed.scheme not in SCHEMES:
+        raise ValueError("URI scheme not supported. Must be one of {0}".format(",".join(SCHEMES)))
+    return parsed.scheme
 
 
 def load_file_yaml():
